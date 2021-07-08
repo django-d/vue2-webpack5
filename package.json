@@ -1,0 +1,94 @@
+{
+	"name": "vue2-webpack5",
+	"version": "1.0.0",
+	"main": "main.js",
+	"repository": "git@github.com:django-d/vue2-webpack5.git",
+	"description": "vue2+webpack5+tailwind+ts",
+	"keywords": [
+		"vue.js",
+		"vue",
+		"webpack",
+		"webpack5",
+		"vue2",
+		"template",
+		"tailwind",
+		"ts",
+		"typescript"
+	],
+	"author": "django",
+	"license": "MIT",
+	"scripts": {
+		"build": "cross-env NODE_ENV=production webpack --config ./webpack.config.ts",
+		"start": "cross-env NODE_ENV=development webpack serve --progress",
+		"serve": "yarn start",
+		"lint": "eslint --fix \"src/**/*.{js,ts,jsx,tsx}\" \"src/**/*.vue\"",
+		"format": "prettier --write \"src/**/*.{js,ts,jsx,tsx}\" \"src/**/*.vue\" ./*.{js,ts}"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{ts,vue}": [
+			"prettier --write",
+			"eslint --fix"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.14.6",
+		"@babel/plugin-proposal-class-properties": "^7.14.5",
+		"@babel/plugin-proposal-decorators": "^7.14.5",
+		"@babel/plugin-transform-runtime": "^7.14.5",
+		"@babel/preset-env": "^7.14.7",
+		"@babel/preset-typescript": "^7.14.5",
+		"@types/mini-css-extract-plugin": "^2.0.1",
+		"@typescript-eslint/eslint-plugin": "^4.28.2",
+		"@typescript-eslint/parser": "^4.28.2",
+		"autoprefixer": "^10.2.6",
+		"babel-loader": "^8.2.2",
+		"babel-plugin-import": "^1.13.3",
+		"clean-webpack-plugin": "^3.0.0",
+		"cross-env": "^7.0.3",
+		"css-loader": "^5.2.6",
+		"eslint": "^7.30.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"eslint-plugin-vue": "^7.13.0",
+		"friendly-errors-webpack-plugin": "^1.7.0",
+		"html-webpack-plugin": "5.3.2",
+		"husky": "^7.0.1",
+		"less": "^4.1.1",
+		"less-loader": "^10.0.1",
+		"lint-staged": "^11.0.0",
+		"mini-css-extract-plugin": "^2.1.0",
+		"node-sass": "^6.0.1",
+		"postcss": "^8.3.5",
+		"postcss-loader": "^6.1.1",
+		"postcss-preset-env": "^6.7.0",
+		"prettier": "^2.3.2",
+		"sass": "^1.35.2",
+		"sass-loader": "^12.1.0",
+		"style-loader": "^3.0.0",
+		"tailwindcss": "^2.2.4",
+		"ts-loader": "^9.2.3",
+		"ts-node": "^10.0.0",
+		"tsconfig-paths-webpack-plugin": "^3.5.1",
+		"typescript": "^4.3.5",
+		"vue-eslint-parser": "^7.8.0",
+		"vue-loader": "^15.9.6",
+		"vue-template-compiler": "^2.6.14",
+		"webpack": "^5.43.0",
+		"webpack-cli": "^4.7.2",
+		"webpack-dev-server": "^3.11.2",
+		"webpackbar": "^5.0.0-3"
+	},
+	"dependencies": {
+		"@babel/polyfill": "^7.12.1",
+		"@babel/runtime": "^7.14.6",
+		"@vue/composition-api": "^1.0.0-rc.13",
+		"ant-design-vue": "^1.7.6",
+		"vue": "^2.6.14",
+		"vue-router": "^3.5.2"
+	}
+}

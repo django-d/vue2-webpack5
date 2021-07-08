@@ -1,0 +1,34 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"useBuiltIns": false
+			}
+		],
+		[
+			"@babel/preset-typescript",
+			{
+				"allExtensions": true
+			}
+		]
+	],
+	"plugins": [
+		[
+			"@babel/plugin-proposal-decorators",
+			{
+				"legacy": true
+			}
+		],
+		["@babel/plugin-proposal-class-properties"],
+		["@babel/plugin-transform-runtime"],
+		[
+			"import",
+			{
+				"libraryName": "ant-design-vue",
+				"libraryDirectory": "es",
+				"style": "css"
+			}
+		] // `style: true` 会加载 less 文件
+	]
+}
